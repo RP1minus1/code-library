@@ -1,11 +1,12 @@
 <script setup lang="ts">
-  const props = defineProps<{
-    label: string;
-  }>();
-
+const props = defineProps<{
+  label: string;
+}>();
 </script>
 
 <template>
-  <button v-text="label" class="px-15 py-10 bg-gray-50 text-center text-gray-800 text-xl rounded-md border-gray-50 border-2 hover:bg-transparent hover:text-gray-50 transition-colors duration-300">
-  </button>
+  <button
+    v-text="label"
+    class="rounded-md border-2 border-gray-50 bg-gray-50 px-15 py-10 text-center text-xl text-gray-800 transition-colors duration-300 hover:bg-transparent hover:text-gray-50"
+  ></button>
 </template>

@@ -25,7 +25,7 @@ const resetInputs = () => {
   tagValue.value = "";
 
   emit("componentSelect", "");
-}
+};
 
 const filteredComponents = computed(() => {
   const search = searchValue.value.toLowerCase();
@@ -56,12 +56,13 @@ const filteredComponents = computed(() => {
     });
   }
 });
-
 </script>
 
 <template>
-  <div class="flex min-w-400 flex-col bg-gradient-to-b from-indigo-500 to-indigo-600 px-20 py-40 h-full overflow-y-scroll">
-    <div class="mb-20 border-gray-50 border-b-2 pb-20">
+  <div
+    class="flex h-full min-w-400 flex-col overflow-y-scroll bg-slate-700 px-20 py-40"
+  >
+    <div class="mb-20 border-b-2 border-gray-50 pb-20">
       <client-only>
         <FormInput
           label="Search For Code"
@@ -93,14 +94,16 @@ const filteredComponents = computed(() => {
         />
       </client-only>
 
-    <BtnBlock label="Reset" class="w-full mt-15" @click="resetInputs" />
+      <BtnBlock label="Reset" class="mt-15 w-full" @click="resetInputs" />
     </div>
 
-
     <div class="flex flex-col space-y-20">
-      <BtnBlock   v-for="(component, index) in filteredComponents"
+      <BtnBlock
+        v-for="(component, index) in filteredComponents"
         :key="index"
-        :label="component.attributes.name" @click="emitComponentSelect(component.attributes.name)"/>
+        :label="component.attributes.name"
+        @click="emitComponentSelect(component.attributes.name)"
+      />
       <!-- <button
         v-for="(component, index) in filteredComponents"
         :key="index"

@@ -41,10 +41,12 @@ export interface SnippetType {
 }
 
 export interface ComponentType {
+  __component: string;
   code: {
     id: number;
     code: string;
   };
+  body: string;
 }
 
 export interface CategoryType {
