@@ -22,7 +22,7 @@ const inputValue = ref("");
     v-model="inputValue"
     @change="emit('input', inputValue)"
     :classes="{
-      label: 'text-gray-50 !text-xl !pb-5',
+      label: 'text-gray-900 !text-xl !pb-5',
       inner: '!rounded-md bg-gray-50 !shadow-none',
       input: '!text-xl !px-15 !py-10',
     }"

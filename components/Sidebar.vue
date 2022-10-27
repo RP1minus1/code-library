@@ -60,7 +60,7 @@ const filteredComponents = computed(() => {
 
 <template>
   <div
-    class="flex h-full min-w-400 flex-col overflow-y-scroll bg-slate-700 px-20 py-40"
+    class="min-w-300 flex h-full flex-col overflow-y-scroll rounded-md bg-white/30 px-20 py-40 backdrop-blur-lg"
   >
     <div class="mb-20 border-b-2 border-gray-50 pb-20">
       <client-only>
