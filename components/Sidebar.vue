@@ -103,6 +103,7 @@ const filteredComponents = computed(() => {
         :key="index"
         :label="component.attributes.name"
         @click="emitComponentSelect(component.attributes.name)"
+        :outline="true"
       />
       <!-- <button
         v-for="(component, index) in filteredComponents"
